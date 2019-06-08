@@ -1,7 +1,4 @@
-package com.codingblocks.routerblocks
-
-import kotlin.annotation.Target
-import kotlin.annotation.Retention
+package com.codingblocks.annotation
 
 @Retention(AnnotationRetention.SOURCE)
 @Target(AnnotationTarget.CLASS)
