@@ -1,12 +1,18 @@
-package com.codingblocks.routerblocks.routerBuilder
+package com.codingblocks.routerblocks.builders
 
 import android.util.Log
 import com.codingblocks.routerblocks.Utils
 import java.util.regex.Pattern
 
+/**
+ * * Generate routing path based on path rules and parameters,
+ * which will replace the parameter definition in the route and
+ * replace it with a specific value.
+ */
+
 class ActivityRouteUrlBuilder
 /**
- * @param matchPath
+ * @param mPath Matched route
  */
     (private var mPath: String) {
     private val mMatchPath: String = mPath

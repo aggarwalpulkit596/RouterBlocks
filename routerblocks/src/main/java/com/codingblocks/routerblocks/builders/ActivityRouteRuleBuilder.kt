@@ -1,4 +1,4 @@
-package com.codingblocks.routerblocks.routerBuilder
+package com.codingblocks.routerblocks.builders
 
 import android.util.Log
 import java.util.*

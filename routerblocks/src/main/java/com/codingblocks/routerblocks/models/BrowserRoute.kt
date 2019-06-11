@@ -1,4 +1,4 @@
-package com.codingblocks.routerblocks.routeModels
+package com.codingblocks.routerblocks.models
 
 import com.codingblocks.routerblocks.router.RouterInterface
 

@@ -1,8 +1,8 @@
-package com.codingblocks.routerblocks.routeModels
+package com.codingblocks.routerblocks.models
 
 import com.codingblocks.routerblocks.router.RouterInterface
 
-interface IRoute {
+interface Route {
 
     /**
      * get the Router to process the Route

@@ -1,9 +1,9 @@
-package com.codingblocks.routerblocks.routeModels
+package com.codingblocks.routerblocks.models
 
 import com.codingblocks.routerblocks.Utils
 import com.codingblocks.routerblocks.router.RouterInterface
 
-abstract class BaseRoute(router: RouterInterface, url: String) : IRoute {
+abstract class BaseRoute(router: RouterInterface, url: String) : Route {
 
     private var mRouter: RouterInterface = router
     private var mUrl: String = url
