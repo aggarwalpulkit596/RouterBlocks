@@ -10,19 +10,6 @@ class Utils {
 
     private val TAG = "UrlUtils"
 
-
-    fun addQueryParameters(url: String, key: String, value: String): String {
-        try {
-            val uri = Uri.parse(url)
-            return uri.buildUpon().appendQueryParameter(key, value).build().toString()
-        } catch (e: Exception) {
-            Log.e(TAG, e.toString() + "")
-        }
-
-        return url
-    }
-
-
     companion object {
         /**
          * get the scheme of the url
@@ -77,6 +64,17 @@ class Utils {
                     builder.appendQueryParameter(key, parameters[key])
                 }
                 return builder.toString()
+            } catch (e: Exception) {
+                Log.e(TAG, e.toString() + "")
+            }
+
+            return url
+        }
+
+        fun addQueryParameters(url: String, key: String, value: String): String {
+            try {
+                val uri = Uri.parse(url)
+                return uri.buildUpon().appendQueryParameter(key, value).build().toString()
             } catch (e: Exception) {
                 Log.e(TAG, e.toString() + "")
             }
