@@ -51,7 +51,7 @@ interface RouterInterface {
      */
     fun canOpenTheUrl(url: String): Boolean
 
-//    fun setInterceptor(interceptor: Interceptor)
+    fun setInterceptor(interceptor: Interceptor)
 
 
 }
