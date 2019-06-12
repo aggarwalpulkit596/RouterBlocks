@@ -5,23 +5,22 @@ import android.content.Context
 import com.codingblocks.routerblocks.Interceptor
 import com.codingblocks.routerblocks.models.Route
 
-abstract class BaseRouter(protected var mBaseContext: Context) : RouterInterface {
+abstract class BaseRouter : RouterInterface {
 
-    private var interceptor: Interceptor? = null
+    var interceptor: Interceptor? = null
 
 
-    fun init(context: Context) {
+    protected var mBaseContext: Context? = null
+
+
+    open fun init(context: Context) {
         mBaseContext = context
     }
 
-    override fun setInterceptor(interceptor: Interceptor) {
-        this.interceptor = interceptor
-    }
 
     companion object {
 
-
-        protected var CAN_OPEN_ROUTE: Class<out Route>? = null
+        public var CAN_OPEN_ROUTE: Class<out Route>? = null
     }
 
 

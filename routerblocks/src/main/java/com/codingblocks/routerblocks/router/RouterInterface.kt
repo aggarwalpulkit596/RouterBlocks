@@ -28,7 +28,7 @@ interface RouterInterface {
     fun open(url: String): Boolean
 
 
-    fun open(context: Context, url: String): Boolean
+    fun open(context: Context?, url: String): Boolean
 
     /**
      * build the route according to the url, if not match, return null
@@ -51,7 +51,7 @@ interface RouterInterface {
      */
     fun canOpenTheUrl(url: String): Boolean
 
-    fun setInterceptor(interceptor: Interceptor)
+//    fun setInterceptor(interceptor: Interceptor)
 
 
 }

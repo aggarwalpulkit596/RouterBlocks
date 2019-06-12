@@ -1,3 +1,5 @@
 package com.codingblocks.routerblocks.router
 
-class HistoryItem(val from: Class<*>, val to: Class<*>)
+import android.app.Activity
+
+class HistoryItem(val from: Class<*>, val to: Class<out Activity>?)

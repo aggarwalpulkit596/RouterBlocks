@@ -1,7 +1,9 @@
 package com.codingblocks.routerblocks.builders
 
 import android.util.Log
+import com.codingblocks.routerblocks.Utils
 import java.util.*
+import java.util.regex.Pattern
 
 class ActivityRouteRuleBuilder : BaseRouteRuleBuilder() {
 
@@ -64,9 +66,34 @@ class ActivityRouteRuleBuilder : BaseRouteRuleBuilder() {
         return this
     }
 
+
     class KeyDuplicateException(key: String) : Exception("The key is duplicated: $key")
 
     companion object {
         private const val TAG = "ActivityRouteUrlBuilder"
+
+        @Deprecated("")
+        fun isActivityRuleValid(url: String): Boolean {
+            val pattern = ":[iflds]?\\{[a-zA-Z0-9]+\\}"
+            val p = Pattern.compile(pattern)
+            val pathSegs = Utils.getPathSegments(url)
+            val checkedSegs = ArrayList<String>()
+            for (seg in pathSegs) {
+                if (seg.startsWith(":")) {
+                    val matcher = p.matcher(seg)
+                    if (!matcher.matches()) {
+                        Log.w(TAG, "The key format not match : $seg")
+                        return false
+                    }
+                    if (checkedSegs.contains(seg)) {
+                        Log.w(TAG, "The key is duplicated : $seg")
+                        return false
+                    }
+                    checkedSegs.add(seg)
+
+                }
+            }
+            return true
+        }
     }
 }
