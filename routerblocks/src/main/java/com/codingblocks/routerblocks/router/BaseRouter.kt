@@ -7,6 +7,7 @@ import com.codingblocks.routerblocks.models.Route
 
 abstract class BaseRouter : RouterInterface {
 
+
     var interceptor: Interceptor? = null
 
 
