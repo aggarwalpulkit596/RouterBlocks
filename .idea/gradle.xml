@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/annotation" />
             <option value="$PROJECT_DIR$/compiler" />
             <option value="$PROJECT_DIR$/routerblocks" />
+            <option value="$PROJECT_DIR$/routersample" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

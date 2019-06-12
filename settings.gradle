@@ -1,1 +1,1 @@
-include ':routerblocks', ':compiler', ':annotation'
+include ':routerblocks', ':compiler', ':annotation', ':routersample'
